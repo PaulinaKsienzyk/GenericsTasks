@@ -10,5 +10,11 @@ public class MyStack<E> {
         return stack.isEmpty();
     }
 
+    public E push(E item) {
+        return stack.push(item);
+    }
 
+    public E peek() {
+        return stack.peek();
+    }
 }
