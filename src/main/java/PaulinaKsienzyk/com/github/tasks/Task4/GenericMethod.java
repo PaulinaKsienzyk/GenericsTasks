@@ -1,23 +1,20 @@
-package PaulinaKsienzyk.com.github.tasks.genericMethods;
+package PaulinaKsienzyk.com.github.tasks.Task4;
 
 import java.time.LocalDate;
 import java.util.*;
 
-import static PaulinaKsienzyk.com.github.tasks.genericMethods.Grade.Title.DOCTOR;
-import static PaulinaKsienzyk.com.github.tasks.genericMethods.Grade.Title.MASTER;
-
 public class GenericMethod {
 
     private static final List<Person> people = List.of(
-            new Person("Paweł", "Kowalsk", 10000L, LocalDate.of(1990, 5, 21)),
-            new Person("Martyna", "Malina", 20000L, LocalDate.of(1970, 4, 21)),
-            new Person("Anna", "Kowalski", 30000L, LocalDate.of(1985, 3, 21))
+            new Person("Anna", "Kowalski", 100L, LocalDate.of(1990,5, 21)),
+            new Person("Jakub", "Grabarz", 110L, LocalDate.of(1987,4, 21)),
+            new Person("Alina", "Kowalski", 120L, LocalDate.of(1970,1, 21))
     );
 
     private static final List<Grade> grades = List.of(
-            new Grade(DOCTOR, LocalDate.of(2000, 1, 12), 10L),
-            new Grade(MASTER, LocalDate.of(2008, 3, 8), 20L),
-            new Grade(DOCTOR, LocalDate.of(2012, 7, 9), 30L)
+            new Grade(Grade.Title.DOCTOR, LocalDate.of(2000, 1, 12), 10L),
+            new Grade(Grade.Title.MASTER, LocalDate.of(2008, 3, 8), 20L),
+            new Grade(Grade.Title.DOCTOR, LocalDate.of(2012, 7, 9), 30L)
     );
 
     private static final List<Integer> integers = List.of(1, 5, 6);
@@ -25,6 +22,7 @@ public class GenericMethod {
     private static final List<Character> characters = List.of('d', 'a', '9');
 
     public static void main(String[] args) {
+
         printMe(people);
         System.out.println("----------");
         printMe(grades);

@@ -1,4 +1,4 @@
-package PaulinaKsienzyk.com.github.tasks.genericMethods;
+package PaulinaKsienzyk.com.github.tasks.Task4;
 
 import java.time.LocalDate;
 import java.util.Objects;
