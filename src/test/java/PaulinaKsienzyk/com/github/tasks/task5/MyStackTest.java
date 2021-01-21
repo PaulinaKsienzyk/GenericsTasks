@@ -4,6 +4,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.util.Stack;
+
 import static org.testng.Assert.*;
 
 public class MyStackTest {
@@ -12,7 +14,7 @@ public class MyStackTest {
 
     @BeforeClass
     public void init() {
-        myStack = new MyStack<>();;
+        myStack = new MyStack<>();
     }
 
     @Test
@@ -32,6 +34,26 @@ public class MyStackTest {
         String expectedValue = "hi, there";
         String actualValue = myStack.peek();
         assertEquals(expectedValue, actualValue);
+    }
+
+    @Test(dependsOnMethods = "afterPushItemShouldBeOnTheTop")
+    public void popShouldReturnItemFromTheTop() {
+        String expectedValue = "hi, there";
+        String actualValue = myStack.pop();
+        assertEquals(expectedValue, actualValue);
+    }
+
+    @Test()
+    public void afterPopItemShouldBeRemovedFromTheStack() {
+        //given
+        Stack<String> stack = new Stack<>();
+        stack.push("Frodo");
+
+        //when
+        stack.pop();
+
+        //then
+        assertTrue(stack.isEmpty());
     }
 
     @DataProvider

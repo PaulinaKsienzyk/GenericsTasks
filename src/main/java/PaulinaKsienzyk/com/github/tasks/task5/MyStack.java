@@ -17,4 +17,8 @@ public class MyStack<E> {
     public E peek() {
         return stack.peek();
     }
+
+    public E pop() {
+        return stack.pop();
+    }
 }
