@@ -1,4 +1,4 @@
-package PaulinaKsienzyk.com.github.tasks.task5;
+package PaulinaKsienzyk.com.github.tasks.task6;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
